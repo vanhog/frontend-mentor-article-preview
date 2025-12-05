@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-[var(--grey-200)]">
+    <div class="flex flex-col justify-center h-screen items-center">
+      <div
+        class="bg-white w-[--mobile-w] rounded-xl flex flex-col justify-center md:flex-row md:w-[--tablet-w] lg:w-[--desktop-w]"
+      >
+        <div
+          class="md:bg-green-200 md:bg-[url(./images/drawers.jpg)] md:rounded-s-xl md:bg-cover md:w-[var(--tablet-drawers-w)]"
+        >
+          <img
+            class="sd:rounded-t-xl md:rounded-s-xl md:hidden"
+            src="./images/drawers.jpg"
+            alt="Drawers"
+          />
+          <div class="sd:hidden">&nbsp;</div>
+        </div>
+        <div class="mt-8 md:mt-10 lg:mt-8 ms-7 me-7">
+          <!-- Distance drawers - title-->
+          <div name="title" class="text-preset-1 mb-6">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </div>
+          <div name="teaser" class="text-preset-2-medium mb-6 md:mb-6">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </div>
+
+          <!-- Author line-->
+          <div
+            class="flex flex-row justify-between items-start border-red-900 border-2 mt-0 mb-6 md:mb-6 lg:mb-1"
+            id="authorline"
+          >
+            <div class="bg-green-400 size-fit flex flex-row">
+              <div>
+                <img
+                  class="rounded-full w-[var(--avatar-s)]"
+                  src="./images/avatar-michelle.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="bg-amber-600 ps-2">
+                <p class="text-preset-2-bold">Michelle Appleton</p>
+                <p class="text-preset-2-medium">28 Jun 2020</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-[var(--grey-200)] w-8 h-8 rounded-full text-center flex justify-center items-center cursor-pointer"
+              id="sharebutton"
+              onclick="showSomePopup()"
+            >
+              <img src="./images/icon-share.svg" alt="Share" id="shareIcon" />
+            </div>
+          </div>
+          <!-- Author line end-->
+        </div>
+        <!-- share line-->
+        <div
+          class="flex flex-row justify-between hidden rounded-b-xl items-center bg-red-700 py-5 mt-0 px-8 md:mb-6 lg:mb-1 md:relative"
+          id="shareline"
+        >
+          <div class="rounded-bl-xl size-fit flex flex-row">
+            <div class="text-preset-3">SHARE</div>
+
+            <div class="ps-2 flex flex-row">
+              <img
+                src="./images/icon-facebook.svg"
+                alt="facebook"
+                class="px-2"
+              />
+              <img src="./images/icon-twitter.svg" alt="twitter" class="px-2" />
+              <img
+                src="./images/icon-pinterest.svg"
+                alt="pinterest"
+                class="px-2"
+              />
+            </div>
+          </div>
+
+          <div
+            class="bg-[var(--grey-900)] w-8 h-8 rounded-full text-center flex justify-center items-center cursor-pointer"
+            id="sharebutton"
+            onclick="showSomePopup()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <path
+                fill="#ffffff"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- share line end-->
+      </div>
+      <div class="attribution mt-6">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/vanhog"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Dieter H. Hoogestraat (Dee)</a
+        >.
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
