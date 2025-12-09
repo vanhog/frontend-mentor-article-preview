@@ -63,10 +63,25 @@
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 #thisPopup .show {
   visibility: visible;
+}
+
+
+.share__toast {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  gap: 24px;
+  padding: 26px 30px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  bottom: -16px;
+  left: -16px;
+  right: -16px;
+  z-index: 2;
 }
