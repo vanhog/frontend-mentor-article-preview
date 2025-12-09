@@ -18,4 +18,6 @@ style-guide.*
 tester.*
 toast.*
 /design
+*.json
+/node_modules
 
