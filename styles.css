@@ -53,10 +53,22 @@
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25rem;
   color: var(--grey-400);
 }
 
+.snackbar {
+  background-color: var(--grey-900);
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  gap: 24px;
+  padding: 26px 30px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: 0rem;
+  left: -28px;
+  z-index: 2;
+}
 /* frontend mentor's attribution stuff*/
 
 .attribution {
@@ -69,4 +81,54 @@
 
 #thisPopup .show {
   visibility: visible;
+}
+
+@media screen and (min-width: 48rem) {
+  .snackbar {
+    background-color: var(--grey-900);
+    left: 25rem;
+    bottom: 6rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 15rem;
+  }
+
+  .snackbar::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 8rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+  }
+
+  #sharelineSharebutton {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .snackbar {
+    background-color: var(--grey-900);
+    left: 32.5rem;
+    bottom: 6rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 15rem;
+  }
+
+  .snackbar::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 8rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+  }
+
+  #sharelineSharebutton {
+    visibility: hidden;
+  }
 }
